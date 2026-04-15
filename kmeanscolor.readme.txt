@@ -1,0 +1,62 @@
+K-Means Clustering for Image Color Quantization
+Developed by DEEPAK.M AI Generalist iPEC Solutions Private Limited Bangalore
+
+🔍 Project Workflow
+
+1️⃣ Load Image
+Read image using OpenCV
+Convert from BGR to RGB
+
+2️⃣ Preprocessing
+Reshape image into 2D array
+Each row represents a pixel (R, G, B)
+
+3️⃣ Apply K-Means
+Choose number of clusters (K)
+Fit K-Means model
+Predict cluster labels
+
+4️⃣ Recreate Image
+Replace each pixel with its cluster centroid
+Reshape back to original image dimensions
+
+5️⃣ Visualization
+Display:
+Original Image
+Compressed Image
+
+📊 Key Insights
+Higher K → Better image quality but less compression
+Lower K → More compression but loss of detail
+K-Means effectively identifies dominant colors
+🖼️ Output
+Compressed image with reduced colors
+Visual comparison between original and processed image
+
+▶️ How to Run the Project
+Clone the repository:
+git clone https://github.com/your-username/kmeans-color-detection.git
+Navigate to the folder:
+cd kmeans-color-detection
+Install dependencies:
+pip install -r requirements.txt
+Run the notebook:
+jupyter notebook "K-MEANS COLOR2.ipynb"
+📌 Requirements
+Python 3.x
+Jupyter Notebook
+Required libraries:
+opencv-python
+numpy
+matplotlib
+scikit-learn
+🚀 Future Improvements
+Automatic optimal K using Elbow Method / Silhouette Score
+Real-time image processing
+GUI using Streamlit
+Apply to video frames
+👤 Author
+Deepak M
+
+📜 License
+This project is for educational and demonstration purposes.
