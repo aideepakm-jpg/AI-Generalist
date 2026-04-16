@@ -1,0 +1,74 @@
+Cluster-Based Spam Detection Using K-Means Algorithm and Silhouette Coefficient
+Developed by DEEPAK.M AI Generalist iPEC Solutions Private Limited Bangalore
+🔍 Project Workflow
+
+1️⃣ Data Loading & Exploration
+Load dataset
+Check structure and distribution
+Analyze spam vs ham ratio
+
+2️⃣ Text Preprocessing
+Convert text to lowercase
+Remove punctuation and special characters
+Remove stopwords
+Tokenization
+Stemming / Lemmatization
+
+3️⃣ Feature Extraction
+Convert text into numerical form using:
+Bag of Words (CountVectorizer)
+TF-IDF Vectorizer
+
+4️⃣ Model Building
+Machine learning models used:
+Naive Bayes
+Logistic Regression
+Decision Tree (optional)
+Random Forest (optional)
+
+5️⃣ Model Evaluation
+Accuracy Score
+Confusion Matrix
+Precision, Recall, F1-score
+ROC-AUC Score
+
+📊 Key Insights
+Text preprocessing significantly improves model performance
+TF-IDF usually performs better than basic count vectorization
+Naive Bayes works well for text classification problems
+Balanced dataset improves prediction quality
+📈 Visualizations
+Spam vs Ham distribution
+Word frequency plots
+Confusion Matrix
+ROC Curve
+
+▶️ How to Run the Project
+1. Clone the repository
+git clone https://github.com/your-username/spam-detection.git
+2. Navigate to the project folder
+cd spam-detection
+3. Install dependencies
+pip install -r requirements.txt
+4. Run the notebook
+jupyter notebook "SPAM DETECTION.ipynb"
+📌 Requirements
+Python 3.x
+Jupyter Notebook
+Required Libraries:
+pandas
+numpy
+scikit-learn
+nltk
+matplotlib
+seaborn
+🚀 Future Improvements
+Use Deep Learning (LSTM, RNN) for better accuracy
+Deploy model using Flask / Streamlit
+Build real-time spam detection system
+Use larger and more diverse datasets
+👤 Author
+Deepak M
+
+📜 License
+This project is for educational purposes.
