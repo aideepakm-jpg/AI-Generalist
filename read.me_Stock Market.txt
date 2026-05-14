@@ -1,0 +1,80 @@
+Stock Market Direction Prediction Using PyCaret
+Developed by DEEPAK.M AI Generalist iPEC Solutions Private Limited Bangalore.
+TEP 1 — Open Terminal
+Open:
+Anaconda Prompt
+OR
+CMD
+OR
+VS Code Terminal
+STEP 2 — Activate Environment
+If using Anaconda:
+conda activate myenv
+Replace myenv with your environment name.
+STEP 3 — Install Required Packages
+Run:
+pip install pycaret pandas numpy scikit-learn
+Optional but recommended:
+pip install lightgbm xgboost catboost
+STEP 4 — Save Python File
+Create file:
+stock_prediction.py
+Paste this code:
+import pandas as pd
+from pycaret.classification import *
+# Load dataset
+df = pd.read_csv('pricol.csv')
+# Remove extra column
+df = df.drop(['Unnamed: 0'], axis=1)
+# Create target
+df['Target'] = (df['close'].shift(-1) > df['close']).astype(int)
+# Remove ticker column
+df = df.drop(['ticker'], axis=1)
+# Fill missing values
+df = df.ffill()
+# Remove remaining NaN rows
+df = df.dropna()
+# Setup PyCaret
+s = setup(
+    data=df,
+    target='Target',
+    session_id=123,
+    normalize=True,
+    fold_strategy='timeseries',
+    data_split_shuffle=False,
+    fold_shuffle=False,
+    data_split_stratify=False
+)
+# Compare models
+best_model = compare_models()
+# Finalize model
+final_model = finalize_model(best_model)
+# Predict
+predictions = predict_model(final_model)
+# Show predictions
+print(predictions.head())
+# Save model
+save_model(final_model, 'stock_prediction_model')
+print("Model Saved Successfully")
+STEP 5 — Put Dataset in Same Folder
+Place:
+pricol.csv
+inside same folder as:
+stock_prediction.py
+STEP 6 — Run Python File
+Open terminal in that folder.
+Run:
+python stock_prediction.py
+OR
+py stock_prediction.py
+STEP 7 — Output
+You will see:
+PyCaret setup table
+Model comparison
+Accuracy scores
+Predictions
+Saved model file:
+stock_prediction_model.pkl
+If Error Comes
+Check Python version:
+python --version
