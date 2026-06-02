@@ -1,0 +1,31 @@
+India Food Price Analysis and Forecasting: Trends, Insights, and Predictive Modeling Using Python
+Developed by DEEPAK.M AI Generalist iPEC Solutions Private Limited Bangalore
+
+Step 1: Install Required Libraries
+Run in Anaconda Prompt or CMD:
+pip install pandas numpy matplotlib seaborn scikit-learn prophet
+Verify:
+pip list
+Step 2: Place Dataset
+Put:
+food_prices_ind.csv
+in the same folder as your notebook:
+food_improved.ipynb
+food_prices_ind.csv
+Step 3: Run Notebook Section by Section
+Phase 1 — Data Understanding
+Check:
+Fill missing values:
+Phase 2 — Exploratory Data Analysis
+Rice Trend
+Phase 4 — Business Insights
+Most Expensive Commodities
+Phase 5 — Correlation
+Phase 6 — Inflation Analysis
+Phase 7 — Machine Learning
+Feature Engineering    [
+Encoding
+Train Model
+Phase 8 — Forecasting with Prophet
+Train:
+View Forecast:
